@@ -9,8 +9,9 @@ let firstNumber = '';
 let secondNumber = '';
 let currentOperator = null;
 let resetDisplay = true;
+display.textContent = '0';
 
-function updateDisplay(value){
+function updateDisplay(value) {
     display.textContent = value;
 }
 
@@ -19,13 +20,45 @@ numberButtons.forEach(button => {
 })
 
 operatorButtons.forEach(button => {
-    if(button.id !== "equal")
+    if (button.id !== "equal")
         button.addEventListener("click", () => setOperator(button.textContent));
 })
 
 equalButton.addEventListener("click", evaluate);
 
 clearButton.addEventListener("click", clear);
+
+function appendNumber(number) {
+    if (display.textContent === '0' || resetDisplay === true) {
+        display.textContent = '';
+        resetDisplay = false;
+    }
+
+    display.textContent += number;
+}
+
+function setOperator(operator) {
+    if (currentOperator !== null)
+        evaluate();
+
+    firstNumber = display.textContent;
+    currentOperator = operator;
+    resetDisplay = true;
+}
+
+function evaluate() {
+    if (currentOperator === null || resetDisplay === true) return;
+    secondNumber = display.textContent;
+    display.textContent = operate(firstNumber, secondNumber, currentOperator);
+    currentOperator = null;
+}
+
+function clear() {
+    display.textContent = '0';
+    firstNumber = '';
+    secondNumber = '';
+    currentOperator = null;
+}
 
 function add(a, b) {
     return a + b
