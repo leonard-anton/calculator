@@ -1,3 +1,10 @@
+const display = document.querySelector(".display");
+
+const numberButtons = document.querySelectorAll(".numbers button");
+const operatorButtons = document.querySelectorAll(".operators button");
+const clearButton = document.getElementById("clear");
+const equalButton = document.getElementById("equal");
+
 function add(a, b) {
     return a + b
 }
