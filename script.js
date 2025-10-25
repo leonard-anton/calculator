@@ -5,6 +5,11 @@ const operatorButtons = document.querySelectorAll(".operators button");
 const clearButton = document.getElementById("clear");
 const equalButton = document.getElementById("equal");
 
+let firstNumber = '';
+let secondNumber = '';
+let currentOperator = null;
+let resetDisplay = true;
+
 function add(a, b) {
     return a + b
 }
