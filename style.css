@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid red;
+    font-size: 20px;
+}
+
+.calculatorBody {
+    background-color: black;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    width: 200px;
+    height: 100px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.leftButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.topRow {
+    display: flex;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
