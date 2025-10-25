@@ -10,6 +10,23 @@ let secondNumber = '';
 let currentOperator = null;
 let resetDisplay = true;
 
+function updateDisplay(value){
+    display.textContent = value;
+}
+
+numberButtons.forEach(button => {
+    button.addEventListener("click", () => appendNumber(button.textContent));
+})
+
+operatorButtons.forEach(button => {
+    if(button.id !== "equal")
+        button.addEventListener("click", () => setOperator(button.textContent));
+})
+
+equalButton.addEventListener("click", evaluate);
+
+clearButton.addEventListener("click", clear);
+
 function add(a, b) {
     return a + b
 }
