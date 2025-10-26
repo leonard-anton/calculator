@@ -29,13 +29,14 @@ equalButton.addEventListener("click", evaluate);
 clearButton.addEventListener("click", clear);
 
 function appendNumber(number) {
-    if (display.textContent === '0' || resetDisplay === true || display.textContent === "Math Error" || display.textContent === "NaN" || display.textContent === "Infinity") {
+    if ((display.textContent === '0' && number !== '.') || resetDisplay === true || display.textContent === "Math Error" || display.textContent === "NaN" || display.textContent === "Infinity") {
         display.textContent = '';
         resetDisplay = false;
     }
+
     if (display.textContent.includes('.') && number === '.')
         return;
-    
+
     display.textContent += number;
 }
 
