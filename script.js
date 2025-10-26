@@ -33,7 +33,9 @@ function appendNumber(number) {
         display.textContent = '';
         resetDisplay = false;
     }
-
+    if (display.textContent.includes('.') && number === '.')
+        return;
+    
     display.textContent += number;
 }
 
