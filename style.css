@@ -38,8 +38,8 @@ button {
     color: white;
 }
 
-button#num0{
-    width:160px;
+button#num0 {
+    width: 160px;
     border-radius: 50px;
 }
 
@@ -71,6 +71,8 @@ button#num0{
     color: white;
     background-color: #323233;
     border-radius: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .buttons {
