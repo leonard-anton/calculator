@@ -29,7 +29,7 @@ equalButton.addEventListener("click", evaluate);
 clearButton.addEventListener("click", clear);
 
 function appendNumber(number) {
-    if (display.textContent === '0' || resetDisplay === true) {
+    if (display.textContent === '0' || resetDisplay === true || display.textContent === "Math Error" || display.textContent === "NaN" || display.textContent === "Infinity") {
         display.textContent = '';
         resetDisplay = false;
     }
@@ -73,6 +73,9 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
+
+    if (b === 0)
+        return "Math Error";
     return a / b;
 }
 
