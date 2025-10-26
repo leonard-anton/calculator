@@ -38,6 +38,11 @@ button {
     color: white;
 }
 
+button#num0{
+    width:160px;
+    border-radius: 50px;
+}
+
 .operators button {
     background-color: #ff9e0b;
     border: 1px solid #ff9e0b;
