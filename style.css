@@ -3,6 +3,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #c8c8cb;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
 }
 
 
